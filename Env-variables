@@ -1,0 +1,69 @@
+pipeline{
+    agent any
+    environment {
+        USER_NAME = "Sachin"
+        USER_ID = 23
+        TRIGGER_NEXT= true
+        TRIGGER_NUN= "true"
+    }
+    stages{
+        stage('List env var'){
+           steps {
+            sh "printenv | sort"
+           }
+        }
+        stage('Using env vars'){
+            environment{
+                USER_PATH = "home/sachin"
+                USER_ID = 46
+            }
+            steps{
+                echo "Build_Number = ${env.BUILD_NUMBER}"
+                sh "echo Build number is = $Build_Number"
+                
+                echo "Current user is ${env.USER_NAME} and his id is ${env.USER_ID} (type: ${env.USER_ID.class})"
+                echo "User path is ${env.USER_PATH}"
+                
+                script {
+                    env.USER_GROUP = "users"  
+                    env.USER_NAME= "Sai" //In the script block it does not override the USER_NAME 
+                }
+                sh 'echo Current user group is $USER_GROUP'
+                echo "Current user is $USER_NAME"
+                
+                withEnv(["USER_PWD=secret", "USER_IS_ADMIN=false", "USER_NAME= Adam"]) {
+                    echo "Current user password is ${env.USER_PWD}"
+                    sh 'echo Current user is admin? $USER_IS_ADMIN'
+                    echo "Current user name is ${env.USER_NAME}" //here it overrides the global USER_NAME variable in withENV block
+                }
+            }
+
+        }
+        stage('Boolean env') {
+            environment {
+                COUNT_FILE = sh (script: "ls -la /temp | tail -n +4 | wc -l", returnStdout: true).trim()
+               
+            }
+        
+            when {
+                expression {
+                    env.TRIGGER_NEXT.toBoolean() == true
+                    }
+                }   
+            steps {
+                echo "OK!"
+                echo "There are ${env.COUNT_FILE} in temp/folder"
+                
+                }
+        }
+        
+        stage('Boolean as string env') {        
+            when {
+                environment name: "TRIGGER_NUN", value: "true" 
+                    }
+            steps {
+                echo "when condition in environment is OK!"
+            }
+        }
+    }
+}
