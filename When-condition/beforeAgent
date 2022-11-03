@@ -1,0 +1,40 @@
+pipeline {
+    agent any
+    environment {
+        DEPLOY_TO = 'production'
+    }
+    stages {
+        stage('Example Build') {
+            steps {
+                echo 'Build without any with condition'
+            }
+            post { 
+                always { 
+                    echo 'Saying Hello from stage!'
+                }
+            }
+        }
+        stage('Example Deploy') {
+            agent {
+                label "ubuntu"
+                
+            }
+            when {
+                beforeAgent true
+                anyOf{
+                    environment name: 'DEPLOY_TO', value: 'production'
+                    environment name: 'DEPLOY_TO', value: 'staging'
+                }
+            }
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }    
+        
+    post { 
+        always { 
+            echo 'Saying Hello from End of Pipeline!'
+        }
+    }    
+}
