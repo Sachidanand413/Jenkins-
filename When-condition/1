@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+    stages {
+        stage('Example Build') {
+            steps {
+                echo 'Build without any with condition'
+            }
+            post { 
+                always { 
+                    echo 'Saying Hello from stage!'
+                }
+            }
+        }
+        stage('Example Deploy') {
+            when {
+                branch 'production'
+            }
+            steps {
+                echo 'Deploy'
+            }
+        }
+    }    
+        
+    post { 
+        always { 
+            echo 'Saying Hello from stage!'
+        }
+    }    
+}
