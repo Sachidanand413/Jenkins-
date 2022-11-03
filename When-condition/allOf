@@ -29,7 +29,7 @@ pipeline {
         
     post { 
         always { 
-            echo 'Saying Hello from stage!'
+            echo 'Saying Hello from End of the pipeline!'
         }
     }    
 }
