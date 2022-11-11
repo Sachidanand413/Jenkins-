@@ -1,6 +1,8 @@
-def build(String arg1) {
+def build() {
+        def var3 = load "../src/config.groovy"
+        configParam = var3.config_params()
         sh """
-        echo "from build function : ${arg1}"
+        echo "from build function"
         """
 }
 
