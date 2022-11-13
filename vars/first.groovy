@@ -6,7 +6,7 @@ def build() {
                 ENVIRONMENT = configParams.ENVIRONMENT
                 maven_file_id = configParams.maven_file_id
         sh """
-        echo "from build function"
+        echo "from build function: $maven_file_id"
         """
 }
 
