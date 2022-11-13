@@ -1,7 +1,6 @@
 package k8s.deploy
 
-def config_params() {
-    configParams = [          
+def configParams = [          
          "ENVIRONMENT" : "TEST",
          "maven_file_id" : "21e8f8bc",
          "maven_target_location" : "/home/jenkins/workspace/settings.xml",
@@ -12,6 +11,5 @@ def config_params() {
          "api_deployment" : "api_v1/deployment",
          "api_deployment_request" : "api_v1/deploymentRequest",
          "go_tool" : "Go_1.19.2"
-    ]
-    return configParams
-}
+]
+
