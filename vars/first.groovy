@@ -1,13 +1,9 @@
 def build() {
-        def current_path =sh(script: "pwd", returnStdout: true).trim()
-        GroovyShell shell = new GroovyShell()
-        def params = shell.parse(new File("${current_path}/src/config.groovy"))
-                configParams = params.config_params()
-                ENVIRONMENT = configParams.ENVIRONMENT
-                maven_file_id = configParams.maven_file_id
-        sh """
-        echo "from build function: $maven_file_id"
-        """
+        stage("first Test")
+                def var2 = load "src/config.groovy"
+                var2.config_params()
+                echo "from build function:"
+                
 }
 
 def deploy(String arg2) {
