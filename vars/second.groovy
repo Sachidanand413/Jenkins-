@@ -7,18 +7,15 @@ def init(first) {
     First = first
 }
 stage("test"){
-    steps{
-       
-        def test1(){
-            //add code for this method
-            First.test2()
-            echo "This is from second groovy and test-1 method"
+    def test1(){
+        //add code for this method
+        First.test2()
+        echo "This is from second groovy and test-1 method"
         }
-        def updateEugeneModuleBuild(env,moduleBuildId,body,version_api_modulebuild){
-            echo "Here iam $env---$moduleBuildId---$body----$version_api_modulebuild"
-            First.api("$HOST","$AUTH_TOKEN","$moduleBuildId","$body")
-            echo "This is from second groovy and test-2 method"
+    def updateEugeneModuleBuild(env,moduleBuildId,body,version_api_modulebuild){
+        echo "Here iam $env---$moduleBuildId---$body----$version_api_modulebuild"
+        First.api("$HOST","$AUTH_TOKEN","$moduleBuildId","$body")
+        echo "This is from second groovy and test-2 method"
         }
-        return this
-    }    
+    return this    
 }
