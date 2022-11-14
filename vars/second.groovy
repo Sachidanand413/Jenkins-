@@ -11,7 +11,7 @@ def test1(){
     //add code for this method
     echo "This is from second groovy and test-1 method"
 }
-def updateEugeneModuleBuild(env,moduleBuildId,body){
+def updateEugeneModuleBuild(env,moduleBuildId,body,version_api_modulebuild){
     echo "Here iam $env---$moduleBuildId---$body----$version_api_modulebuild"
     First.api("$HOST","$AUTH_TOKEN","$moduleBuildId","$body")
     echo "This is from second groovy and test-2 method"
