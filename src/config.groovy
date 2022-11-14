@@ -1,6 +1,7 @@
 
 import groovy.transform.Field
 
+@Field
 def config_Params = {
          configParams = [          
                   "ENVIRONMENT" : "TEST",
@@ -14,5 +15,5 @@ def config_Params = {
                   "api_deployment_request" : "api_v1/deploymentRequest",
                   "go_tool" : "Go_1.19.2"
          ]
-         return configParams
+         return configParams;
 }
