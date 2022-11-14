@@ -1,4 +1,4 @@
-package k8s.deploy
+
 import groovy.transform.Field
 
 def config_Params = {
