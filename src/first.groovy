@@ -5,5 +5,6 @@ def test1(){
 def test2(){
     //add code for this method
     echo "From first groovy and test-2 method"
+    test1()
 }
 return this
