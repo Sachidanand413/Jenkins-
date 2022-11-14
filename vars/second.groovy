@@ -13,7 +13,7 @@ def test1(){
 }
 def updateEugeneModuleBuild(env,moduleBuildId,body){
     echo "Here iam $env---$moduleBuildId---$body----$version_api_modulebuild"
-    First.api("$HOST","$AUTH_TOKEN",$"moduleBuildId",$"body")
+    First.api("$HOST","$AUTH_TOKEN","$moduleBuildId","$body")
     echo "This is from second groovy and test-2 method"
 }
 return this
