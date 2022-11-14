@@ -1,14 +1,14 @@
 import groovy.transform.Field
 @Field private First = null
+def version_api_modulebuild=           "src"
+def version_api_api_deployment=        "src"
+def version_api_api_deployment_request="src"
+def init(first) {
+    First = first
+}
 stage("test"){
     steps{
-        def version_api_modulebuild=           "src"
-        def version_api_api_deployment=        "src"
-        def version_api_api_deployment_request="src"
-
-        def init(first) {
-            First = first
-        }
+       
         def test1(){
             //add code for this method
             First.test2()
