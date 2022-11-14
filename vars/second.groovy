@@ -9,6 +9,7 @@ def init(first) {
 }
 def test1(){
     //add code for this method
+    First.test2()
     echo "This is from second groovy and test-1 method"
 }
 def updateEugeneModuleBuild(env,moduleBuildId,body,version_api_modulebuild){
