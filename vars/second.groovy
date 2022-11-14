@@ -6,16 +6,18 @@ def version_api_api_deployment_request="src"
 def init(first) {
     First = first
 }
-stage("test"){
-    def test1(){
+
+def test1(){
         //add code for this method
         First.test2()
         echo "This is from second groovy and test-1 method"
         }
-    def updateEugeneModuleBuild(env,moduleBuildId,body,version_api_modulebuild){
+def updateEugeneModuleBuild(env,moduleBuildId,body,version_api_modulebuild){
+    stage("test"){
         echo "Here iam $env---$moduleBuildId---$body----$version_api_modulebuild"
         First.api("$HOST","$AUTH_TOKEN","$moduleBuildId","$body")
         echo "This is from second groovy and test-2 method"
-        }
-    return this    
+        } 
+    }
+return this    
 }
