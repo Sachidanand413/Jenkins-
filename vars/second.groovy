@@ -12,7 +12,7 @@ def test1(){
         First.test2()
         echo "This is from second groovy and test-1 method"
         }
-def updateEugeneModuleBuild(env,moduleBuildId,body,"$version_api_modulebuild",HOST,AUTH_TOKEN){
+def updateEugeneModuleBuild(env,moduleBuildId,body,HOST,AUTH_TOKEN){
     stage("test"){
         echo "Here iam $env---$moduleBuildId---$body----$version_api_modulebuild"
         //def var = load ("./constants.groovy")
