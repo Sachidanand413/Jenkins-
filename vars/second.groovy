@@ -1,10 +1,12 @@
 import groovy.transform.Field
 @Field private apiModuleBuild = null
+
+initiate = "hello"
 version_api_modulebuild= "src"
 def version_api_api_deployment=        "src"
 def version_api_api_deployment_request="src"
-def init(hello) {
-    apiModuleBuild = hello
+def init($initiate) {
+    apiModuleBuild = $initiate
 }
 
 def test1(){
