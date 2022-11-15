@@ -15,12 +15,13 @@ def test1(){
         echo "This is from second groovy and test-1 method"
         }
 def updateEugeneModuleBuild(env,moduleBuildId,body,HOST,AUTH_TOKEN){
-    stage("test"){
-        echo "Here iam $env---$moduleBuildId---$body----$version_api_modulebuild"
+    \\stage("test"){
+    echo "Here iam $env---$moduleBuildId---$body----$version_api_modulebuild"
         //def var = load ("./constants.groovy")
-        apiModuleBuild.api("$HOST","$AUTH_TOKEN","$moduleBuildId","$body")
-        echo "This is from second groovy and test-2 method"
-        } 
+        
+    apiModuleBuild.api("$HOST","$AUTH_TOKEN","$moduleBuildId","$body")
+    echo "This is from second groovy and test-2 method"
+      \\  } 
     }
 return this    
 
