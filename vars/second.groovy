@@ -1,6 +1,6 @@
 import groovy.transform.Field
 @Field private First = null
-def version_api_modulebuild=           "src"
+version_api_modulebuild= "src"
 def version_api_api_deployment=        "src"
 def version_api_api_deployment_request="src"
 def init(first) {
@@ -12,7 +12,7 @@ def test1(){
         First.test2()
         echo "This is from second groovy and test-1 method"
         }
-def updateEugeneModuleBuild(env,moduleBuildId,body,version_api_modulebuild,HOST,AUTH_TOKEN){
+def updateEugeneModuleBuild(env,moduleBuildId,body,HOST,AUTH_TOKEN){
     stage("test"){
         echo "Here iam $env---$moduleBuildId---$body----$version_api_modulebuild"
         //def var = load ("./constants.groovy")
