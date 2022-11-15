@@ -1,3 +1,4 @@
+package k8s.deploy
 import groovy.transform.Field
 @Field private apiModuleBuild = null
 
