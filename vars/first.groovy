@@ -1,9 +1,7 @@
 def build() {
-        stage("first Test")
-                def var2 = load "src/config.groovy"
-                var2.config_params()
-                echo "from build function:"
-                
+        sh """
+        echo "from build function:"
+        """
 }
 
 def deploy(String arg2) {
