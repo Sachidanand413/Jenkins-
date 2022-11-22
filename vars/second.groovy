@@ -28,7 +28,7 @@ def firstMod(){
         }
 def helloModuleBuild(env,moduleBuildId,body,HOST,AUTH_TOKEN){
     //stage("test"){
-    echo "Here iam $env---$moduleBuildId---$body----$version_api_modulebuild"
+    echo "Here iam from helloModuleBuild ---$env---$moduleBuildId---$body----$version_api_modulebuild"
         //def var = load ("./constants.groovy")
         
     helloModule.helloApi("$HOST","$AUTH_TOKEN","$moduleBuildId","$body")
@@ -36,7 +36,7 @@ def helloModuleBuild(env,moduleBuildId,body,HOST,AUTH_TOKEN){
       //  } 
 def firstModuleBuild(env,moduleBuildId,body,HOST,AUTH_TOKEN){
     //stage("test"){
-    echo "Here iam $env---$moduleBuildId---$body----$version_api_modulebuild"
+    echo "Here iam from firstModuleBuild ---$env---$moduleBuildId---$body----$version_api_modulebuild"
         //def var = load ("./constants.groovy")
         
     firstModule.firstApi("$HOST","$AUTH_TOKEN","$moduleBuildId","$body")
