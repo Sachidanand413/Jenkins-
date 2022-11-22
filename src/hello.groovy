@@ -1,10 +1,10 @@
-def api(HOST,AUTH_TOKEN,modulebuildId,body){
+def helloApi(HOST,AUTH_TOKEN,modulebuildId,body){
     //add code for this method
-    echo "From first groovy and test-1 method"
+    echo "From hello groovy and test-1 method"
     echo "$HOST----$AUTH_TOKEN-----$modulebuildId-----$body"
 }
-def test2(){
+def helloTest(){
     //add code for this method
-    echo "From first groovy and test-2 method"
+    echo "From hello groovy and test-2 method"
 }
 return this
