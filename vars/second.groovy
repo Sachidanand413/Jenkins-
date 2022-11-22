@@ -16,12 +16,17 @@ def init(){
     
 }
 
-def test1(){
+def testHello(){
+        //add code for this method
+        helloModule.helloTest()
+        echo "This is from second groovy and helloTest method from hello.groovy" 
+        }
+def testfirst(){
         //add code for this method
         firstModule.firstTest2()
-        echo "This is from second groovy and test-1 method"
+        echo "This is from second groovy and firstTest method from first.groovy" 
         }
-def updateHelloModuleBuild(env,moduleBuildId,body,HOST,AUTH_TOKEN){
+def HelloModuleBuild(env,moduleBuildId,body,HOST,AUTH_TOKEN){
     //stage("test"){
     echo "Here iam $env---$moduleBuildId---$body----$version_api_modulebuild"
         //def var = load ("./constants.groovy")
@@ -29,6 +34,14 @@ def updateHelloModuleBuild(env,moduleBuildId,body,HOST,AUTH_TOKEN){
     helloModule.helloApi("$HOST","$AUTH_TOKEN","$moduleBuildId","$body")
     echo "This is from second groovy and test-2 method"
       //  } 
+def firstModuleBuild(env,moduleBuildId,body,HOST,AUTH_TOKEN){
+    //stage("test"){
+    echo "Here iam $env---$moduleBuildId---$body----$version_api_modulebuild"
+        //def var = load ("./constants.groovy")
+        
+    firstModule.firstApi("$HOST","$AUTH_TOKEN","$moduleBuildId","$body")
+    echo "This is from second groovy with firstModuleBuild method and firstApi method from first.groovy"
+      //  }     
     }
 return this    
 
