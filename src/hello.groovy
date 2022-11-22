@@ -1,6 +1,6 @@
 def helloApi(HOST,AUTH_TOKEN,modulebuildId,body){
     //add code for this method
-    echo "From hello groovy and test-1 method"
+    echo "From hello groovy and ${docker_login} method"
     echo "${Host}----$HOST---$AUTH_TOKEN-----$modulebuildId-----$body"
 }
 def helloTest(){
