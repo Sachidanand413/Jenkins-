@@ -3,7 +3,7 @@ import groovy.transform.Field
 
 @Field private helloModule = null
 @Field private firstModule = null
-
+def version_api_modulebuild = "src"
 
 def init(){
     //def current_path =sh(script: "pwd", returnStdout: true).trim()
