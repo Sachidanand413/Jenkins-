@@ -5,6 +5,6 @@ def helloApi(HOST,AUTH_TOKEN,modulebuildId,body){
 }
 def helloTest(){
     //add code for this method
-    echo "From hello groovy and test-2 method $HOST"
+    echo "From hello groovy and test-2 method $Host"
 }
 return this
