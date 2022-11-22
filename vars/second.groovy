@@ -34,6 +34,7 @@ def helloModuleBuild(env,moduleBuildId,body,HOST,AUTH_TOKEN){
     helloModule.helloApi("$HOST","$AUTH_TOKEN","$moduleBuildId","$body")
     echo "This is from second groovy and test-2 method"
       //  } 
+}
 def firstModuleBuild(env,moduleBuildId,body,HOST,AUTH_TOKEN){
     //stage("test"){
     echo "Here iam from firstModuleBuild ---$env---$moduleBuildId---$body----$version_api_modulebuild"
