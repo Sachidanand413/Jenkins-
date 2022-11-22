@@ -16,17 +16,17 @@ def init(){
     
 }
 
-def testHello(){
+def helloMod(){
         //add code for this method
         helloModule.helloTest()
         echo "This is from second groovy and helloTest method from hello.groovy" 
         }
-def testfirst(){
+def firstMod(){
         //add code for this method
         firstModule.firstTest2()
         echo "This is from second groovy and firstTest method from first.groovy" 
         }
-def HelloModuleBuild(env,moduleBuildId,body,HOST,AUTH_TOKEN){
+def helloModuleBuild(env,moduleBuildId,body,HOST,AUTH_TOKEN){
     //stage("test"){
     echo "Here iam $env---$moduleBuildId---$body----$version_api_modulebuild"
         //def var = load ("./constants.groovy")
