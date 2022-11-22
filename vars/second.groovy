@@ -13,20 +13,20 @@ def init(){
     
     helloModule = load ("${env.WORKSPACE}/src/${hello_version}.groovy")
     firstModule = load ("${env.WORKSPACE}/src/${first_version}.groovy")
-    
 }
 
 def helloMod(){
-        //add code for this method
-        helloModule.helloTest()
-        echo "This is from second groovy and helloTest method from hello.groovy" 
-        }
+    //add code for this method
+    helloModule.helloTest()
+    echo "This is from second groovy and helloTest method from hello.groovy" 
+}
 def firstMod(){
-        //add code for this method
-        firstModule.firstTest2()
-        echo "This is from second groovy and firstTest method from first.groovy" 
-        }
+    //add code for this method
+    firstModule.firstTest2()
+    echo "This is from second groovy and firstTest method from first.groovy" 
+}
 def helloModuleBuild(env,moduleBuildId,body,HOST,AUTH_TOKEN){
+    
     //stage("test"){
     echo "Here iam from helloModuleBuild ---$env---$moduleBuildId---$body----$version_api_modulebuild"
         //def var = load ("./constants.groovy")
