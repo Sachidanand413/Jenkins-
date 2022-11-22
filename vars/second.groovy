@@ -11,8 +11,8 @@ def init(){
     def hello_version = "hello"
     def first_version = "first"    
     
-    helloModule = load ("${current_path}/API/PublisherAPI/${hello_version}.groovy")
-    firstModule = load ("${current_path}/API/PublisherAPI/${first_version}.groovy")
+    helloModule = load ("${current_path}/src/${hello_version}.groovy")
+    firstModule = load ("${current_path}/src/${first_version}.groovy")
     
 }
 
