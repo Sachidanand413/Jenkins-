@@ -1,8 +1,8 @@
 package k8s.deploy
 import groovy.transform.Field
 
-@Field private apiModuleBuild = null
-@Field private apiModuleBuild = null
+@Field private helloModule = null
+@Field private firstModule = null
 
 
 def init(){
