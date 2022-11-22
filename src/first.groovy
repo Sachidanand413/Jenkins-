@@ -3,7 +3,7 @@ def firstApi(HOST,AUTH_TOKEN,modulebuildId,body){
     echo "From first groovy and test-1 method"
     echo "$HOST----$AUTH_TOKEN-----$modulebuildId-----$body"
 }
-def firsTest2(){
+def firstTest2(){
     //add code for this method
     echo "From first groovy and test-2 method"
 }
