@@ -6,13 +6,13 @@ import groovy.transform.Field
 
 
 def init(){
-    def current_path =sh(script: "pwd", returnStdout: true).trim()
+    //def current_path =sh(script: "pwd", returnStdout: true).trim()
     
     def hello_version = "hello"
     def first_version = "first"    
     
-    helloModule = load ("${current_path}/src/${hello_version}.groovy")
-    firstModule = load ("${current_path}/src/${first_version}.groovy")
+    helloModule = load ("${env.WORKSPACE}/src/${hello_version}.groovy")
+    firstModule = load ("${env.WORKSPACE}/src/${first_version}.groovy")
     
 }
 
