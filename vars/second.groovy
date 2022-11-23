@@ -26,13 +26,15 @@ def firstMod(){
     firstModule.firstTest2()
     echo "This is from second groovy and firstTest method from first.groovy" 
 }
-def helloModuleBuild(env,moduleBuildId,body,HOST,AUTH_TOKEN){
+//def helloModuleBuild(env,moduleBuildId,HOST,AUTH_TOKEN){
+  def helloModuleBuild(){
     
     //stage("test"){
     echo "Here iam from helloModuleBuild ---$env---$moduleBuildId---$body----$version_api_modulebuild"
         //def var = load ("./constants.groovy")
         
-    helloModule.helloApi("$HOST","$AUTH_TOKEN","$moduleBuildId","$body")
+//    helloModule.helloApi("$HOST","$AUTH_TOKEN","$moduleBuildId","$body")
+    helloModule.helloApi()
     echo "This is from second groovy and test-2 method"
       //  } 
 }
