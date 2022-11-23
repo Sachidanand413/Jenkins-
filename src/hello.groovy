@@ -5,7 +5,7 @@ def helloApi(HOST,AUTH_TOKEN,modulebuildId,body){
 }
 def helloTest(){
     //add code for this method
-    echo "From hello groovy and ${ENVIRONMENT}-2 method"
+    echo "From hello groovy and ${ENVIRONMENT}-2 method with build number ${env.BUILD_NUMBER}"
     echo "${ENVIRONMENT}----${docker_login}-----${sonar_scanner}"
 }
 return this
