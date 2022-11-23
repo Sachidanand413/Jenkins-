@@ -1,4 +1,4 @@
-def helloApi(HOST,AUTH_TOKEN,modulebuildId,body){
+def helloApi(HOST,AUTH_TOKEN,modulebuildId){
     //add code for this method
     echo "From hello groovy and ${docker_login} method"
     echo "----$HOST---$AUTH_TOKEN-----$modulebuildId-----${body}"
