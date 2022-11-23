@@ -2,7 +2,7 @@
 def helloApi(){
     //add code for this method
     echo "From hello groovy and ${docker_login} method"
-    echo "----$Host---$AUTH_TOKEN-----$modulebuildId-----${body}"
+    echo "----${Host}---${AUTH_TOKEN}-----${modulebuildId}-----${body}"
 }
 def helloTest(){
     //add code for this method
