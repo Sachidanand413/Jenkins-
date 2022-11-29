@@ -6,7 +6,7 @@ def helloApi(bodies){
     echo "$bodies"
     module = "$bodies"
     echo "module"
-    if (module == 'hello') {
+    if (module == 'true') {
         echo 'Hello from main branch'
         }
     else {
