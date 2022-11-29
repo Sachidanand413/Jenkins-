@@ -4,8 +4,9 @@ def helloApi(bodies){
     echo "From hello groovy and ${docker_login} method"
     echo "----${Host}---${AUTH_TOKEN}-----${modulebuildId}-----${body}---${myName}"
     echo "$bodies"
-    //value1 = $bodies
-    if ($bodies == 'hello') {
+    module = $bodies
+    echo "module"
+    if (module == 'hello') {
         echo 'Hello from main branch'
         }
     else {
