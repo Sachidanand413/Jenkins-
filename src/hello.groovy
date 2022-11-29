@@ -5,7 +5,7 @@ def helloApi(bodies){
     echo "----${Host}---${AUTH_TOKEN}-----${modulebuildId}-----${body}---${myName}"
     echo "$bodies"
     module = "$bodies"
-    echo "module"
+    echo "$module"
     if (module == 'true') {
         echo 'Hello from main branch'
         }
