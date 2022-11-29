@@ -3,13 +3,14 @@ def helloApi(bodies){
     //add code for this method
     echo "From hello groovy and ${docker_login} method"
     echo "----${Host}---${AUTH_TOKEN}-----${modulebuildId}-----${body}---${myName}"
-    value1 = ${bodies}
-    if (value1 == 'hello') {
-        echo 'Hello from main branch'
-        }
-    else {
-        sh "echo 'Hello from ${env.BRANCH_NAME} branch!'"
-        }
+    echo "$bodies"
+    //value1 = $bodies
+    //if (value1 == 'hello') {
+    //    echo 'Hello from main branch'
+    //    }
+    //else {
+    //    sh "echo 'Hello from ${env.BRANCH_NAME} branch!'"
+    //    }
 }
 def helloTest(){
     //add code for this method
