@@ -6,9 +6,6 @@ def helloApi(){
     if (env.BRANCH_NAME == 'main') {
         echo 'Hello from main branch'
         }
-    if (env.BRANCH_NAME == 'null') {
-        echo 'Hello from null branch'
-        }
     else {
         sh "echo 'Hello from ${env.BRANCH_NAME} branch!'"
         }
