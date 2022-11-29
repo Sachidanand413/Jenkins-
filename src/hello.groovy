@@ -3,7 +3,8 @@ def helloApi(docker){
     //add code for this method
     echo "From hello groovy and ${docker_login} method"
     echo "----${Host}---${AUTH_TOKEN}-----${modulebuildId}-----${body}---${myName}"
-    if ($docker == 'hello') {
+    value1 = $docker
+    if (value1 == 'hello') {
         echo 'Hello from main branch'
         }
     else {
