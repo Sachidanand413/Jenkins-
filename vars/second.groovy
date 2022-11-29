@@ -34,7 +34,7 @@ def firstMod(){
         //def var = load ("./constants.groovy")
         
 //    helloModule.helloApi("$HOST","$AUTH_TOKEN","$moduleBuildId","$body")
-    helloModule.helloApi()
+    helloModule.helloApi(docker)
     echo "This is from second groovy and test-2 method"
       //  } 
 }
