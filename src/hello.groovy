@@ -1,9 +1,9 @@
 //def helloApi(HOST,AUTH_TOKEN,modulebuildId){
-def helloApi(val1){
+def helloApi(bodies){
     //add code for this method
     echo "From hello groovy and ${docker_login} method"
     echo "----${Host}---${AUTH_TOKEN}-----${modulebuildId}-----${body}---${myName}"
-    value1 = $val1
+    value1 = ${bodies}
     if (value1 == 'hello') {
         echo 'Hello from main branch'
         }
